@@ -5,36 +5,43 @@ const steps = [
   {
     title: "Buat Folder & Simpan File",
     description:
-      "Suruh mereka bikin folder biasa di laptopnya (misal: C:\\AddinGue) dan taruh file manifest.xml yang sudah di-download ke dalam folder tersebut.",
+      "Bikin folder biasa di laptop (misal: C:\\AddinGue) dan taruh file manifest.xml yang sudah di-download ke dalam folder tersebut.",
+    imageUrl: "/g-1.png", // Ganti dengan nama file foto kamu untuk step 1
   },
   {
     title: "Share Folder ke Network",
     description:
       "Klik kanan folder itu → Properties → tab Sharing → klik Share… → tambahin user kamu sendiri dan ubah Permission Level jadi Read/Write. Terus Copy 'Network Path' foldernya (contoh: \\\\NAMA-LAPTOP\\AddinGue).",
+    imageUrl: "/g-2.png", // Ganti dengan nama file foto kamu untuk step 2
   },
   {
     title: "Buka Microsoft Office",
-    description: "Buka aplikasi Word atau Excel Desktop di laptop kamu.",
+    description: "Buka aplikasi Word Desktop di laptop kamu.",
+    imageUrl: "/g-3.png", // Ganti dengan nama file foto kamu untuk step 3
   },
   {
     title: "Masuk ke Trust Center",
     description:
       "Pergi ke menu File > Options > Trust Center > klik tombol 'Trust Center Settings' > pilih 'Trusted Add-in Catalogs'.",
+    imageUrl: "/g-4.png", // Ganti dengan nama file foto kamu untuk step 4
   },
   {
     title: "Daftarkan Folder",
     description:
-      "Paste path folder yang tadi di-copy ke kotak 'Catalog Url', lalu klik tombol 'Add catalog'.",
+      "Paste path folder yang tadi di-copy ke kotak 'Catalog Url', lalu klik tombol 'Add catalog',Centang kotak 'Show in Menu', klik OK, dan restart (tutup dan buka kembali) aplikasi Word-nya..",
+    imageUrl: "/g-4.1.png", // Ganti dengan nama file foto kamu untuk step 5
   },
   {
     title: "Tampilkan di Menu",
     description:
-      "Centang kotak 'Show in Menu', klik OK, dan restart (tutup dan buka kembali) aplikasi Word/Excel-nya.",
+      "Ke halaman dokument word, tinggal pergi ke tab Insert > Add-ins > More Add-ins.",
+    imageUrl: "/g5.png", // Ganti dengan nama file foto kamu untuk step 6
   },
   {
     title: "Gunakan Add-in",
     description:
-      "Pas dibuka lagi, tinggal pergi ke tab Insert > Add-ins > Shared Folder. Add-in kamu bakal muncul di situ dan siap digunakan!",
+      "Pilih SHARED FOLDER, Klik Ai Word Agent, Lalu Klik Add. Add-in kamu bakal muncul di situ dan siap digunakan!",
+    imageUrl: "/g6.png", // Ganti dengan nama file foto kamu untuk step 7
   },
 ];
 
@@ -50,6 +57,7 @@ const Index = () => {
             stepNumber={i + 1}
             title={step.title}
             description={step.description}
+            imageUrl={step.imageUrl} // Kode ini yang mengirim gambar ke komponen StepCard
             isLast={i === steps.length - 1}
           />
         ))}
@@ -57,7 +65,7 @@ const Index = () => {
 
       <footer className="border-t border-border py-10 text-center">
         <p className="text-muted-foreground text-sm">
-          Built for custom add-in deployment.
+          © 2026 Widi. All rights reserved.
         </p>
       </footer>
     </div>

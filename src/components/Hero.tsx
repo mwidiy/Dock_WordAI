@@ -20,7 +20,7 @@ const Hero = () => {
         className="relative text-4xl sm:text-5xl md:text-7xl font-bold text-primary max-w-4xl"
         style={{ textWrap: "balance" }}
       >
-        Cara Install Custom Add-in di Word/Excel Desktop
+        Cara Install Custom Add-in di Word Desktop
       </motion.h1>
 
       <motion.p
@@ -33,8 +33,10 @@ const Hero = () => {
         (Sideloading) di laptop Windows kamu.
       </motion.p>
 
+      {/* Bagian tombol yang diubah */}
       <motion.a
-        href="#"
+        href="/manifest.xml" // Mengarah langsung ke file di folder public
+        download="manifest.xml" // Atribut ini yang memaksa browser untuk mendownload, bukan membukanya
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 0.2, ease: [0.2, 0.8, 0.2, 1] }}
@@ -49,4 +51,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default Hero
